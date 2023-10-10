@@ -1,0 +1,18 @@
+<h1>{{ frase }}</h1>
+
+<a [href]="linkDaAncora">{{ linkDaAncora }}</a>
+
+<p (click)="mudarCor()" [style.background-color]="corBackground" [style.color]="corFonte">Clique para mudar a cor</p>
+
+<select [(ngModel)]="opcaoSelecionada">
+  <option value="texto1">Texto 1</option>
+  <option value="texto2">Texto 2</option>
+  <option value="texto3">Texto 3</option>
+  <option value="texto4">Texto 4</option>
+</select>
+
+<div *ngIf="opcaoSelecionada === 'texto1' && texto1Visivel">Texto 1</div>
+<div *ngIf="opcaoSelecionada === 'texto2' && texto2Visivel">Texto 2</div>
+<div *ngIf="opcaoSelecionada === 'texto3' && texto3Visivel">Texto 3</div>
+<div *ngIf="opcaoSelecionada === 'texto4' && texto4Visivel">Texto 4</div>
+
